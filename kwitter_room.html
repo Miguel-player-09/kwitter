@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Página de Salas Kwitter</title>
+	<link rel="icon" href="./logo.png">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+
+	<div class="container">
+		<!--Adicione a função onclick="logout();" ao botão Sair-->
+		<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="logout();">Sair</button>
+
+		<center>
+			<h1 class="header">
+				Kwitter
+				<sup>
+					<img src="m2.png">
+				</sup>
+			</h1>
+
+			<!--adicione id="user_name" à tag h3 -->
+			<h3 id="user_name" class="color_white"></h3>
+
+			<div class="form-group input_div_room_page">
+				<label>#Adicionar Sala:</label>
+				<!--adicione uma caixa de entrada (tag input) para inserirmos o nome da sala, ela terá type="text"
+			id="room_name" class="form-control" e placeholder="#Nome da Sala"-->
+				<input type="text" id="room_name" class="form-control" placeholder="#Nome da Sala">
+			</div>
+
+			<!--adicione a função onclick="addRoom();" ao botão #Adicionar Sala-->
+			<button class="btn btn-success" onclick="addRoom();">#Adicionar Sala</button>
+
+			<h3 class="color_white">#SALAS EM DESTAQUE</h3>
+
+			<!--adicione uma div com a id=”output”, essa tag div será usada para armazenar todos os nomes das salas.-->
+			<div id="output"></div>
+
+		</center>
+	</div>
+
+
+	<script src="kwitter_room.js"></script>
+</body>
+
+</html>
+
+<!--documento revisado-->
